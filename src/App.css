@@ -1,0 +1,304 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  background-color: var(--clr-darkest);
+  color: var(--clr-lightest);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --gap-bg: 4rem;
+  --gap-md: 2rem;
+  --gap-small: 0.5rem;
+
+  --padding-small: 0.5rem;
+  --padding-medium: 3rem;
+  --padding-large: 5rem;
+  --border-radius: 0.5rem;
+  --line-height: 1.8;
+
+  --clr-lightest: hsl(0, 0%, 93.33%);
+  --clr-light: hsl(0, 0%, 66.67%);
+  --clr-medium: hsl(0, 0%, 40%);
+  --clr-dark: hsl(0, 0%, 20%);
+  --clr-darker: hsl(0, 0%, 13.33%);
+  --clr-darkest: hsl(0, 0%, 10.98%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ----------------------------------------------generic-------------------------------- */
+.icon {
+  height: 28px;
+  width: 28px;
+  color: var(--clr-light);
+}
+
+#feed .divider {
+  opacity: 55%;
+  margin-block: var(--padding-medium);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 1vw, 2rem);
+  opacity: 85%;
+  font-weight: 200;
+  letter-spacing: 0.05ch;
+  padding-top: var(--padding-medium);
+}
+
+/* ----------------------------------------------full wrapper-------------------------------- */
+#full-wrapper {
+  display: flex;
+  overflow: hidden;
+  margin: 0 auto;
+  gap: var(--gap-bg);
+  letter-spacing: 0.15ch;
+  height: 100svh;
+}
+
+/* ----------------------------------------------scrollbar-------------------------------- */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--clr-light) transparent;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 20px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+}
+/* ----------------------------------------------nav-------------------------------- */
+
+#NAV-wrapper {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: var(--gap-md);
+  flex: 1;
+  margin-left: 15dvw;
+  margin-top: 10svh;
+}
+
+nav {
+  display: grid;
+  gap: var(--gap-small);
+  margin-right: 10rem;
+}
+
+.name-title-wrapper span {
+  color: var(--clr-light);
+}
+
+.resume-cv-wrapper {
+  display: flex;
+  gap: var(--gap-md);
+}
+
+.resume-cv-wrapper button {
+  padding: var(--padding-small);
+  background: var(--clr-darker);
+  border-radius: var(--border-radius);
+  border: none;
+  color: var(--clr-light);
+}
+/* ----------------------------------------------feed-------------------------------- */
+
+#feed {
+  overflow-y: scroll;
+  flex: 3;
+  height: 100svh;
+  line-height: var(--line-height);
+  letter-spacing: 0.025ch;
+  padding-top: 10svh;
+}
+
+#feed > * {
+  max-width: 35rem;
+}
+/* ----------------------------------------------home-------------------------------- */
+
+.home-wrapper {
+  height: 60svh;
+  background-color: var(--clr-darker);
+}
+
+.home-wrapper svg {
+  height: inherit;
+  width: 100%;
+}
+/* ----------------------------------------------about-------------------------------- */
+
+.about-wrapper {
+  display: grid;
+  gap: var(--gap-md);
+}
+
+.headshot-wrapper {
+  display: flex;
+  align-items: center;
+
+  border-radius: var(--border-radius);
+}
+.icon-wrapper {
+  display: grid;
+  place-content: center;
+  place-items: center;
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  background-color: var(--clr-darker);
+  border-radius: var(--border-radius);
+}
+
+/* #headshot-icon {
+} */
+
+#headshot-img {
+  flex: 2;
+  width: 50%;
+  border-radius: var(--border-radius);
+}
+/* ----------------bio------------------ */
+
+/* ----------------education------------------ */
+.education-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.education {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gap-small);
+}
+
+.education-item {
+  background-color: var(--clr-darker);
+  border-radius: 0.5rem;
+  padding: var(--padding-small);
+}
+
+/* ----------------skills------------------ */
+.skills-wrapper {
+  display: grid;
+  gap: var(--gap-small);
+}
+
+.skills-wrapper h5 {
+  opacity: 65%;
+}
+
+.skills-wrapper ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap-small);
+  list-style: none;
+}
+
+.skills-wrapper li {
+  background-color: var(--clr-darker);
+  border-radius: 0.5rem;
+  text-align: center;
+  padding: 0.5rem 1rem;
+}
+
+/* ----------------------------------------------projects-------------------------------- */
+
+.projects-list {
+  display: grid;
+  gap: var(--gap-bg);
+}
+
+.project-card img {
+  object-fit: cover;
+  height: 25rem;
+  width: 100%;
+}
+
+.project-card h3 {
+  font-size: x-large;
+}
+
+.project-card h4 {
+  opacity: 50%;
+  font-weight: 300;
+}
+
+.project-card hr {
+  margin-block: var(--padding-small);
+}
+
+.project-link-wrapper {
+  display: flex;
+  gap: var(--gap-md);
+  padding-top: var(--padding-medium);
+}
+
+.project-link-wrapper a {
+  color: var(--clr-light);
+  background: var(--clr-darker);
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--border-radius);
+}
+
+/* ----------------------------------------------contact-------------------------------- */
+
+.contact-links-wrapper {
+  display: flex;
+  color: var(--clr-light);
+  margin-bottom: var(--gap-bg);
+  gap: var(--gap-md);
+}
+
+.contact-links-wrapper h5 {
+  display: none;
+}
+
+.contact-links-wrapper button {
+  border-radius: var(--border-radius);
+  aspect-ratio: 1;
+  height: 3rem;
+  outline: none;
+  border: none;
+  background: var(--clr-darker);
+}
+/* ----------------------------------------------feed contact-------------------------------- */
+
+#feed .contact-links-wrapper {
+  justify-content: space-between;
+  padding-block: var(--padding-medium);
+  font-size: large;
+  border-radius: var(--border-radius);
+  gap: var(--gap-bg);
+}
+#feed .contact-links-wrapper h5 {
+  display: flex;
+  font-size: large;
+}
+#feed .contact-links-wrapper .social-item {
+  display: flex;
+  place-content: center;
+  place-items: center;
+  gap: var(--gap-small);
+}
+#feed > #icon {
+  padding: 15rem;
+  height: 24rem;
+  width: 24rem;
+}
