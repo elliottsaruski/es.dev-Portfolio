@@ -1,3 +1,5 @@
+import { MdArrowDropDown } from "react-icons/md";
+
 function Projects() {
   return (
     <section id="projects" className="projects-wrapper">
@@ -18,10 +20,15 @@ function Projects() {
               The interactive audio and media players can be used to listen/view
               while browsing the site.
             </span>
+            <div className="more-info-wrapper">
+              <button>
+                <MdArrowDropDown />
+                More Info
+              </button>
+            </div>
             <div className="project-link-wrapper">
               <a>website</a>
               <a>code</a>
-              <a>more info</a>
             </div>
           </div>
         </div>
@@ -40,10 +47,15 @@ function Projects() {
               gathers the artists{"'"} live show dates from bandsintown /
               songkick / ticketmaster API.
             </span>
+            <div className="more-info-wrapper">
+              <button>
+                <MdArrowDropDown />
+                More Info
+              </button>
+            </div>
             <div className="project-link-wrapper">
               <a>website</a>
               <a>code</a>
-              <a>more info</a>
             </div>
           </div>
         </div>
@@ -61,10 +73,15 @@ function Projects() {
               Transform the speed of an uploaded audio file. HRS also works as a
               standalone audio player with an interactive waveform scrubber.
             </span>
+            <div className="more-info-wrapper">
+              <button>
+                <MdArrowDropDown />
+                More Info
+              </button>
+            </div>
             <div className="project-link-wrapper">
               <a>demo</a>
               <a>code</a>
-              <a>more info</a>
             </div>
           </div>
         </div>

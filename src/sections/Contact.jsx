@@ -1,5 +1,5 @@
 import { CiTwitter, CiLinkedin } from "react-icons/ci";
-import { RiGithubLine } from "react-icons/ri";
+import { VscGithubAlt } from "react-icons/vsc";
 
 function Contact() {
   return <Links />;
@@ -16,7 +16,7 @@ const Links = () => {
       </div>
       <div className="social-item">
         <button href="https://github.com/elliottsaruski">
-          <RiGithubLine className="icon" />
+          <VscGithubAlt className="icon" />
         </button>
         <h5>Github</h5>
       </div>

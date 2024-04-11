@@ -11,11 +11,13 @@
 
   --gap-bg: 4rem;
   --gap-md: 2rem;
-  --gap-small: 0.5rem;
+  --gap-sm: 0.5rem;
 
   --padding-small: 0.5rem;
-  --padding-medium: 3rem;
-  --padding-large: 5rem;
+  --padding-medium: 1.5rem;
+  --padding-medium2: 3rem;
+  --padding-large: 6rem;
+
   --border-radius: 0.5rem;
   --line-height: 1.8;
 
@@ -97,7 +99,7 @@ h2 {
 
 nav {
   display: grid;
-  gap: var(--gap-small);
+  gap: var(--gap-sm);
   margin-right: 10rem;
 }
 
@@ -121,11 +123,13 @@ nav {
 
 #feed {
   overflow-y: scroll;
+  display: grid;
   flex: 3;
   height: 100svh;
   line-height: var(--line-height);
   letter-spacing: 0.025ch;
   padding-top: 10svh;
+  gap: var(--gap-md);
 }
 
 #feed > * {
@@ -146,15 +150,15 @@ nav {
 
 .about-wrapper {
   display: grid;
-  gap: var(--gap-md);
+  gap: var(--gap-bg);
 }
 
 .headshot-wrapper {
   display: flex;
   align-items: center;
-
   border-radius: var(--border-radius);
 }
+
 .icon-wrapper {
   display: grid;
   place-content: center;
@@ -184,38 +188,88 @@ nav {
 
 .education {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--gap-small);
+  gap: var(--gap-md);
 }
 
 .education-item {
+  display: flex;
   background-color: var(--clr-darker);
   border-radius: 0.5rem;
   padding: var(--padding-small);
+  padding-block: 1rem;
+}
+
+.education-item hr {
+  margin-right: var(--gap-md);
+}
+
+.education-icon-wrapper {
+  display: flex;
+  flex: 0.5;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+
+.education-info-wrapper {
+  flex: 2;
+}
+
+.education-info-wrapper p:not(.education-type) {
+  color: var(--clr-light);
+}
+.education-type {
+  font-size: large;
+  font-weight: 700;
+  color: var(--clr-lightest);
+}
+
+.education-wrapper h3,
+.skills-wrapper h3 {
+  padding-bottom: var(--padding-medium);
 }
 
 /* ----------------skills------------------ */
 .skills-wrapper {
   display: grid;
-  gap: var(--gap-small);
+  gap: var(--gap-sm);
 }
 
 .skills-wrapper h5 {
   opacity: 65%;
 }
 
-.skills-wrapper ul {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--gap-small);
-  list-style: none;
-}
-
 .skills-wrapper li {
   background-color: var(--clr-darker);
   border-radius: 0.5rem;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  place-items: center;
   text-align: center;
-  padding: 0.5rem 1rem;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap-sm);
+  list-style: none;
+  padding-block: var(--padding-medium);
+}
+
+.skills-list li {
+  padding-block: var(--padding-medium);
+}
+
+.skills-wrapper li .skill-icon {
+  flex: 0.5;
+  height: 48px;
+  width: 48px;
+  opacity: 55%;
+}
+.skills-wrapper li p {
+  flex: 1;
 }
 
 /* ----------------------------------------------projects-------------------------------- */
@@ -244,6 +298,24 @@ nav {
   margin-block: var(--padding-small);
 }
 
+.project-card img {
+  border-radius: var(--border-radius);
+}
+.more-info-wrapper button {
+  color: var(--clr-light);
+  display: flex;
+  background: transparent;
+  opacity: 80%;
+  padding-block: var(--padding-small);
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: small;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+}
+
 .project-link-wrapper {
   display: flex;
   gap: var(--gap-md);
@@ -262,7 +334,7 @@ nav {
 .contact-links-wrapper {
   display: flex;
   color: var(--clr-light);
-  margin-bottom: var(--gap-bg);
+  /* margin-bottom: var(--gap-bg); */
   gap: var(--gap-md);
 }
 
@@ -273,10 +345,13 @@ nav {
 .contact-links-wrapper button {
   border-radius: var(--border-radius);
   aspect-ratio: 1;
-  height: 3rem;
   outline: none;
   border: none;
-  background: var(--clr-darker);
+  background: transparent;
+}
+
+.contact-links-wrapper > #icon {
+  scale: 2;
 }
 /* ----------------------------------------------feed contact-------------------------------- */
 
@@ -286,6 +361,7 @@ nav {
   font-size: large;
   border-radius: var(--border-radius);
   gap: var(--gap-bg);
+  margin-bottom: var(--gap-bg);
 }
 #feed .contact-links-wrapper h5 {
   display: flex;
@@ -295,7 +371,7 @@ nav {
   display: flex;
   place-content: center;
   place-items: center;
-  gap: var(--gap-small);
+  gap: var(--gap-sm);
 }
 #feed > #icon {
   padding: 15rem;
