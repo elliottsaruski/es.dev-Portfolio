@@ -12,12 +12,18 @@ function NavBar() {
         <li>Projects</li>
         <li>Creative</li>
       </nav>
-      <div className="resume-cv-wrapper">
-        <button>Resume</button>
-        <button>CV</button>
-      </div>
+      <ResumeCV />
       <Contact />
     </header>
+  );
+}
+
+function ResumeCV() {
+  return (
+    <div className="resume-cv-wrapper">
+      <button>Resume</button>
+      <button>CV</button>
+    </div>
   );
 }
 

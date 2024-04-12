@@ -1,11 +1,15 @@
 import { MdArrowDropDown } from "react-icons/md";
 
+import SONprojectImg from "../assets/FEED.png";
+import maxFryImg from "../assets/HOME.png";
+import HRSprojectImg from "../assets/HRS.png";
+
 function Projects() {
   return (
     <section id="projects" className="projects-wrapper">
       <div className="projects-list">
         <div className="project-card">
-          <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+          <img src={SONprojectImg} />
           <div className="project-text-wrapper">
             <h3>Symptoms of Nature: Creative Collective</h3>{" "}
             <h4>Web-Design, Front-End, Audio Player</h4>
@@ -26,14 +30,14 @@ function Projects() {
                 More Info
               </button>
             </div>
-            <div className="project-link-wrapper">
+            {/* <div className="project-link-wrapper">
               <a>website</a>
               <a>code</a>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="project-card">
-          <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+          <img src={maxFryImg} />
           <div className="project-text-wrapper">
             <h3>Max Fry</h3>
             <h4>Web-Design, Front-End</h4>
@@ -53,14 +57,14 @@ function Projects() {
                 More Info
               </button>
             </div>
-            <div className="project-link-wrapper">
+            {/* <div className="project-link-wrapper">
               <a>website</a>
               <a>code</a>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="project-card">
-          <img src="https://images.unsplash.com/photo-1571330735066-03aaa9429d89?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+          <img src={HRSprojectImg} />
           <div className="project-text-wrapper">
             <h3>HRS</h3>
             <h4>Front-End, Audio Manipulation</h4>
@@ -81,7 +85,7 @@ function Projects() {
             </div>
             <div className="project-link-wrapper">
               <a>demo</a>
-              <a>code</a>
+              <a href="https://github.com/elliottsaruski/HRS-app">code</a>
             </div>
           </div>
         </div>

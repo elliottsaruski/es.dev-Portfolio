@@ -1,4 +1,4 @@
-import headshot from "../assets/headshot-upscale.jpg";
+import headshot from "../assets/es-headshot.jpg";
 import { SiCodecademy } from "react-icons/si";
 import { PiGraduationCap } from "react-icons/pi";
 import { MdOutlinePhotoCameraFront } from "react-icons/md";
@@ -26,11 +26,10 @@ function About() {
   return (
     <section className="about-wrapper">
       <div className="headshot-wrapper">
-        <div className="icon-wrapper">
-          <MdOutlinePhotoCameraFront className="icon" id="headshot-icon" />
-        </div>
         <img src={headshot} id="headshot-img" />
+        <MdOutlinePhotoCameraFront id="headshot-icon" />
       </div>
+
       <span className="about-span">
         Hiya! My name is Elliott {"("}2 L{"'"}s, 2 T{"'"}s{")"} Saruski {"("}
         <em>sa-roo-ski</em>
@@ -48,6 +47,7 @@ function About() {
         DAWS, VSTs, and Web Audio Applications to musician / producer focused
         products or services.
       </span>
+      <hr className="divider-2"></hr>
       <div className="education-wrapper">
         <h3>Education</h3>
         <div className="education">
@@ -67,7 +67,6 @@ function About() {
               <PiGraduationCap className="icon" />
             </div>
             <hr></hr>
-
             <div className="education-info-wrapper">
               <p className="education-time-frame">2016-20</p>
               <h5 className="education-type">B.S. Marketing</h5>
@@ -76,6 +75,8 @@ function About() {
           </div>
         </div>
       </div>
+      <hr className="divider-2"></hr>
+
       <div className="skills-wrapper">
         <div className="skill">
           <h3>Skills</h3>
