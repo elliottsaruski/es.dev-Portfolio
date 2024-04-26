@@ -1,9 +1,17 @@
+import { useState } from "react";
+import { RiMoonClearFill, RiSunLine } from "react-icons/ri";
+
 function ColorMode() {
+  const [colorTheme, setColorTheme] = useState("dark");
+
+  function toggleColorTheme() {
+    colorTheme === "dark" ? setColorTheme("light") : setColorTheme("dark");
+  }
+
   return (
-    <div>
-      <option value="">dark mode</option>
-      <option value="">light mode</option>
-    </div>
+    <button className="colorThemeToggle" onClick={toggleColorTheme}>
+      {colorTheme === "light" ? <RiSunLine /> : <RiMoonClearFill />}
+    </button>
   );
 }
 

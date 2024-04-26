@@ -43,26 +43,9 @@
   color: var(--clr-light);
 }
 
-#feed .divider {
-  opacity: 55%;
-  /* margin-block: var(--padding-medium); */
-}
-
-h2 {
-  font-size: clamp(2.5rem, 1vw, 3rem);
-  opacity: 85%;
-  font-weight: 200;
-  letter-spacing: 0.05ch;
-  padding-top: var(--padding-medium);
-}
-
 /* ----------------------------------------------full wrapper-------------------------------- */
 #full-wrapper {
   display: flex;
-  overflow: hidden;
-  /* gap: var(--gap-bg); */
-  letter-spacing: 0.15ch;
-  height: 100svh;
 }
 
 /* ----------------------------------------------scrollbar-------------------------------- */
@@ -89,10 +72,9 @@ h2 {
   display: flex;
   flex-direction: column;
   list-style: none;
-  gap: var(--gap-md);
-  margin-left: 20dvw;
-  margin-top: 10dvh;
-  flex: 1;
+  gap: var(--gap-sm);
+  flex: 0.5;
+  position: relative;
 }
 
 nav {
@@ -103,19 +85,36 @@ nav {
 .name-title-wrapper h4 {
   font-weight: 300;
   letter-spacing: 0.5ch;
-  opacity: 85%;
+}
+
+.inner-nav {
+  padding-left: 1rem;
+}
+
+.nav-bottom-wrapper {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: var(--padding-small);
+}
+
+.nav-bottom-wrapper-inner {
+  display: flex;
+  flex: 1;
 }
 
 .resume-cv-wrapper {
   display: flex;
-  gap: var(--gap-md);
+  margin-block: var(--padding-medium);
 }
 
 .resume-cv-wrapper button {
-  padding: var(--padding-small);
-  background: var(--clr-darker);
+  background: var(--clr-dark);
+  padding: 0.4rem;
   border-radius: var(--border-radius);
   border: none;
+
   color: var(--clr-light);
 }
 /* ----------------------------------------------feed-------------------------------- */
@@ -127,17 +126,12 @@ nav {
   height: 100svh;
   line-height: var(--line-height);
   letter-spacing: 0.025ch;
-  padding-top: 10svh;
-  padding-right: var(--gap-bg);
 }
 
-#feed > * {
+/* #feed > * {
   max-width: 45rem;
-}
-
-/* #feed img {
-  object-fit: contain;
 } */
+
 /* ----------------------------------------------home-------------------------------- */
 
 .home-wrapper {
@@ -331,7 +325,13 @@ nav {
   display: flex;
   /* color: var(--clr-light); */
   /* margin-bottom: var(--gap-bg); */
-  gap: var(--gap-md);
+  gap: var(--gap-sm);
+  flex: 2;
+  justify-content: flex-end;
+}
+
+.colorThemeToggle {
+  flex: 1;
 }
 
 .contact-links-wrapper h5 {
@@ -340,6 +340,8 @@ nav {
 
 .contact-links-wrapper button {
   border-radius: var(--border-radius);
+  display: flex;
+
   aspect-ratio: 1;
   outline: none;
   border: none;

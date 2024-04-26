@@ -4,18 +4,29 @@ import Contact from "./Contact";
 function NavBar() {
   return (
     <header id="nav-wrapper">
-        <div className="name-title-wrapper">
-          <h1>Elliott Saruski</h1>
-          <h4>Front-End Engineer</h4>
-        </div>
+      <div className="name-title-wrapper">
+        <h1>Elliott Saruski</h1>
+        <h4>Front-End Engineer</h4>
+      </div>
+      <hr />
       <nav>
-        <li>About Me</li>
-        <li>Projects</li>
-        <li>Creative</li>
+        <ul>
+          <li>Home</li>
+          <ul className="inner-nav">
+            <li>About Me</li>
+            <li>Projects</li>
+            <li>Contact</li>
+          </ul>
+          <li>Creative</li>
+        </ul>
       </nav>
       <ResumeCV />
-      <Contact />
-      <ColorMode />
+      <div className="nav-bottom-wrapper">
+        <ColorMode />
+        <div className="nav-bottom-wrapper-inner">
+          <Contact />
+        </div>
+      </div>
     </header>
   );
 }

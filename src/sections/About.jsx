@@ -56,72 +56,42 @@ function About() {
           </div>
         </div>
       </div>
-
-      <h3>My Tech Stack</h3>
       <div className="skills-wrapper">
-        <div className="skill">
-          <h5>Framework + Runtime</h5>
-          <ul className="skills-list">
-            <li>
-              <SiReact className="skill-icon" />
-              <p>ReactJS</p>
-            </li>
-            <li>
-              <SiVite className="skill-icon" />
-              <p>Vite</p>
-            </li>
-            <li>
-              <FaNodeJs className="skill-icon" />
-              <p>Node.js</p>
-            </li>
-          </ul>
-        </div>
-        <div className="skill">
-          <h5>Languages</h5>
-          <ul className="skills-list">
-            <li>
-              <FaHtml5 className="skill-icon" />
-              <p>HTML5</p>
-            </li>
-            <li>
-              <FaCss3Alt className="skill-icon" />
-              <p>CSS3</p>
-            </li>
-            <li>
-              <RiJavascriptFill className="skill-icon" />
-              <p>JavaScript (ES6+)</p>
-            </li>
-          </ul>
-        </div>
-        <div className="skill">
-          <h5>Other Tools and Tech</h5>
-          <ul className="skills-list">
-            <li>
-              <IoLogoFigma className="skill-icon" />
-              <p>Figma</p>
-            </li>
-            <li>
-              <TbBrandFramerMotion className="skill-icon" />
-              <p>Framer Motion</p>
-            </li>
-            <li>
-              <SiAdobecreativecloud className="skill-icon" />
-              <p>Adobe CC</p>
-            </li>
-            <li>
-              <SiAbletonlive className="skill-icon" />
-              <p>Ableton Live</p>
-            </li>
-            <li>
-              <SiBlender className="skill-icon" />
-              <p>Blender 3D</p>
-            </li>
-            <li>
-              <MdOndemandVideo className="skill-icon" />
-              <p>DaVinci Resolve</p>
-            </li>
-          </ul>
-        </div>
+        <h3>Stack</h3>
+        <ul>
+          <li>
+            <SiReact className="skill-icon" />
+            <p>ReactJS</p>
+          </li>
+          <li>
+            <SiVite className="skill-icon" />
+            <p>Vite</p>
+          </li>
+          <li>
+            <FaNodeJs className="skill-icon" />
+            <p>Node.js</p>
+          </li>
+          <li>
+            <FaHtml5 className="skill-icon" />
+            <p>HTML5</p>
+          </li>
+          <li>
+            <FaCss3Alt className="skill-icon" />
+            <p>CSS3</p>
+          </li>
+          <li>
+            <RiJavascriptFill className="skill-icon" />
+            <p>JavaScript (ES6+)</p>
+          </li>
+          <li>
+            <IoLogoFigma className="skill-icon" />
+            <p>Figma</p>
+          </li>
+          <li>
+            <TbBrandFramerMotion className="skill-icon" />
+            <p>Framer Motion</p>
+          </li>
+        </ul>
       </div>
     </section>
   );

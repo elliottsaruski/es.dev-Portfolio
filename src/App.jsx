@@ -9,7 +9,7 @@ function App() {
   return (
     <div id="full-wrapper">
       <Navbar />
-      {/* <hr /> */}
+      <hr />
       <div id="feed">
         <Home />
         <h2>About Me</h2>
