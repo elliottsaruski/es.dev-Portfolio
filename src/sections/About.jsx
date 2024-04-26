@@ -1,21 +1,11 @@
 import headshot from "../assets/es-headshot.jpg";
-import { SiCodecademy } from "react-icons/si";
-import { PiGraduationCap } from "react-icons/pi";
-import { MdOutlinePhotoCameraFront } from "react-icons/md";
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
 import { RiJavascriptFill } from "react-icons/ri";
 import { SiReact } from "react-icons/si";
 import { SiVite } from "react-icons/si";
 import { FaNodeJs } from "react-icons/fa";
-import { SiRedux } from "react-icons/si";
-import { SiTailwindcss } from "react-icons/si";
 import { TbBrandFramerMotion } from "react-icons/tb";
-import { MdAudiotrack } from "react-icons/md";
-import { TbApi } from "react-icons/tb";
-import { FaGithub } from "react-icons/fa";
-import { BiLogoNetlify } from "react-icons/bi";
-import { SiLighthouse } from "react-icons/si";
 import { IoLogoFigma } from "react-icons/io5";
 import { SiAdobecreativecloud } from "react-icons/si";
 import { SiAbletonlive } from "react-icons/si";
@@ -25,37 +15,32 @@ import { MdOndemandVideo } from "react-icons/md";
 function About() {
   return (
     <section className="about-wrapper">
-      <div className="headshot-wrapper">
+      <div className="about-me">
         <img src={headshot} id="headshot-img" />
-        <MdOutlinePhotoCameraFront id="headshot-icon" />
+        <span className="about-span">
+          Hiya! My name is Elliott {"("}2 L{"'"}s, 2 T{"'"}s{")"} Saruski {"("}
+          <em>sa-roo-ski</em>
+          {")"}, a Marketer turned Front-End Engineer - based in Miami, FL -
+          with a specialty in <strong>ReactJS.</strong> In my spare time I make{" "}
+          <a href="https://soundcloud.com/envimusic">
+            <strong>electronic music</strong>
+          </a>
+          , <strong>3D graphics</strong>, & other <strong>multimedia</strong>
+          <br></br>
+          <br></br> I{"'"}m currently looking to join a team of developers who
+          would find benefit from my keen eye for detail and endless desire for
+          learning.
+          {/* <br></br>
+          <br></br>Ideally, I would like to incorporate my deep passion for
+          music technology with the development of interactive digital
+          experiences, from DAWS, VSTs, and Web Audio Applications to musician /
+          producer focused products or services. */}
+        </span>
       </div>
-
-      <span className="about-span">
-        Hiya! My name is Elliott {"("}2 L{"'"}s, 2 T{"'"}s{")"} Saruski {"("}
-        <em>sa-roo-ski</em>
-        {")"}, a Marketer turned Front-End Engineer - based in Miami, FL - with
-        a specialty in <strong>ReactJS.</strong> In my spare time I make{" "}
-        <a href="https://soundcloud.com/envimusic">
-          <strong>electronic music</strong>
-        </a>
-        , <strong>3D graphics</strong>, & other <strong>multimedia</strong>. I
-        {"'"}m currently looking to join a team of developers who would find
-        benefit from my keen eye for detail and endless desire for learning.
-        <br></br>
-        <br></br>Ideally, I would like to incorporate my deep passion for music
-        technology with the development of interactive digital experiences, from
-        DAWS, VSTs, and Web Audio Applications to musician / producer focused
-        products or services.
-      </span>
-      <hr className="divider-2"></hr>
+      <h3>Education</h3>
       <div className="education-wrapper">
-        <h3>Education</h3>
         <div className="education">
           <div className="education-item" id="coding">
-            <div className="education-icon-wrapper">
-              <SiCodecademy className="icon" />
-            </div>
-            <hr></hr>
             <div className="education-info-wrapper">
               <p className="education-time-frame">2022-23</p>
               <h5 className="education-type">Front-End Engineer Career Path</h5>
@@ -63,10 +48,6 @@ function About() {
             </div>
           </div>
           <div className="education-item" id="marketing">
-            <div className="education-icon-wrapper">
-              <PiGraduationCap className="icon" />
-            </div>
-            <hr></hr>
             <div className="education-info-wrapper">
               <p className="education-time-frame">2016-20</p>
               <h5 className="education-type">B.S. Marketing</h5>
@@ -75,11 +56,27 @@ function About() {
           </div>
         </div>
       </div>
-      <hr className="divider-2"></hr>
 
+      <h3>My Tech Stack</h3>
       <div className="skills-wrapper">
         <div className="skill">
-          <h3>Skills</h3>
+          <h5>Framework + Runtime</h5>
+          <ul className="skills-list">
+            <li>
+              <SiReact className="skill-icon" />
+              <p>ReactJS</p>
+            </li>
+            <li>
+              <SiVite className="skill-icon" />
+              <p>Vite</p>
+            </li>
+            <li>
+              <FaNodeJs className="skill-icon" />
+              <p>Node.js</p>
+            </li>
+          </ul>
+        </div>
+        <div className="skill">
           <h5>Languages</h5>
           <ul className="skills-list">
             <li>
@@ -97,60 +94,15 @@ function About() {
           </ul>
         </div>
         <div className="skill">
-          <h5>Frameworks / Libraries</h5>
+          <h5>Other Tools and Tech</h5>
           <ul className="skills-list">
             <li>
-              <SiReact className="skill-icon" />
-              <p>ReactJS</p>
-            </li>
-            <li>
-              <SiVite className="skill-icon" />
-              <p>Vite</p>
-            </li>
-            <li>
-              <FaNodeJs className="skill-icon" />
-              <p>Node.js</p>
-            </li>
-            <li>
-              <SiRedux className="skill-icon" />
-              <p>Redux</p>
-            </li>
-            <li>
-              <SiTailwindcss className="skill-icon" />
-              <p>Tailwind CSS</p>
+              <IoLogoFigma className="skill-icon" />
+              <p>Figma</p>
             </li>
             <li>
               <TbBrandFramerMotion className="skill-icon" />
               <p>Framer Motion</p>
-            </li>
-            <li>
-              <MdAudiotrack className="skill-icon" />
-              <p>Tone.js</p>
-            </li>
-            <li>
-              <TbApi className="skill-icon" />
-              <p>Web Audio API</p>
-            </li>
-          </ul>
-        </div>
-        <div className="skill">
-          <h5>Tools / Software</h5>
-          <ul className="skills-list">
-            <li>
-              <FaGithub className="skill-icon" />
-              <p>Git</p>
-            </li>
-            <li>
-              <BiLogoNetlify className="skill-icon" />
-              <p>Netlify</p>
-            </li>
-            <li>
-              <SiLighthouse className="skill-icon" />
-              <p>Lighthouse</p>
-            </li>
-            <li>
-              <IoLogoFigma className="skill-icon" />
-              <p>Figma</p>
             </li>
             <li>
               <SiAdobecreativecloud className="skill-icon" />
